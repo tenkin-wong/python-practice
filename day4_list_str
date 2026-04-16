@@ -1,0 +1,145 @@
+# 1. 写函数，统计列表里有几个奇数
+def count_odd_numbers(lst):
+    count = 0
+    for i in lst:
+        if i %2 !=0:
+            count += 1
+    return count
+
+# 2. 写函数，返回列表里所有小于 10 的数字组成的新列表
+def find_number_low10(lst):
+    new_lst= []
+    for i in lst:
+        if i < 10:
+            new_lst.append(i)
+    return new_lst
+# 3. 写函数，把列表里每个数字都加 5 后返回新列表
+def num_add_5(lst):
+    new_lst = []
+    for i in lst:
+        i += 5
+        new_lst.append(i)
+    return new_lst
+
+# 4. 写函数，统计字符串里有几个小写字母
+
+def count_lowercase(s):
+    count = 0
+    for i in s:
+        if i.islower():
+            count += 1
+    return count
+
+# 5写函数，找出字符串里所有数字字符，组成一个新字符串返回
+def find_numletters(s):
+    new_str = ""
+    for i in s:
+        if i.isdigit():
+            new_str += i
+    return new_str
+# 6写函数，返回列表里所有长度大于 3 的字符串组成的新列表
+def len_long_than_3(lst):
+    new_lst = []
+    for i in lst:
+        if len(i) > 3 :
+            new_lst.append(i)
+    return new_lst
+# 7写函数，统计一个列表里有几个回文字符串
+def count_palindrome(lst):
+    count = 0
+    for i in lst:
+        if i == i[::-1]:
+            count += 1
+    return count
+
+# 8写函数，找出列表里所有素数，组成一个新列表返回
+def is_prime(num):
+    if num < 2:
+        return False
+    for j in range(2, num):
+        if num % j == 0:
+            return False
+    return True
+
+def find_prime_number(lst):
+    new_lst = []
+    for i in lst:
+        if is_prime(i):
+            new_lst.append(i)
+    return new_lst
+
+# 9. 写函数，返回列表里所有奇数都乘 2 后组成的新列表
+def odd_numbers_times2(lst):
+    new_lst = []
+    for i in lst:
+        if i %2 != 0:
+            new_lst.append(i*2)
+    return new_lst
+# 10. 写函数，统计字符串里有几个空格
+def count_blank(s):
+    count = 0
+    for i in s:
+        if i == " ":
+            count += 1
+    return count
+
+# 11. 写函数，删除字符串里所有数字字符
+def delete_all_num_letter(s):
+    new_str = ""
+    for i in s:
+        if not i.isdigit():
+            new_str += i
+    return new_str
+# 12. 写函数，返回列表里所有回文字符串组成的新列表
+def find_palindrome(lst):
+    new_lst = []
+    for i in lst:
+        if i == i [::-1]:
+            new_lst.append(i)
+    return new_lst
+# 13. 写函数，统计列表里长度等于 3 的字符串有几个
+def count_len_3(lst):
+    count = 0
+    for i in lst:
+        if len(i) == 3:
+            count += 1
+    return count
+
+# 14. 写函数，把列表里所有素数都乘 2 后组成新列表返回
+def confirm_prime(num):
+    if num < 2:
+        return False
+    for j in range(2, num):
+        if num % j == 0:
+            return False
+    return True
+
+def prime_number_times2(lst):
+    new_lst = []
+    for i in lst:
+        if confirm_prime(i):
+            new_lst.append(i * 2)
+    return new_lst
+# 15. 写函数，找出字符串里所有大写字母，组成一个新字符串返回
+def find_capital_letters(s):
+    new_str = ""
+    for i in s:
+        if i.isupper():
+            new_str += i
+    return new_str
+# 16. 写函数，返回列表里所有长度小于等于 4 的字符串组成的新列表
+def create_list_shorter_4(lst):
+    new_lst = []
+    for i in lst:
+        if len(i) <= 4:
+            new_lst.append(i)
+    return new_lst
+
+
+
+
+
+
+
+
+
