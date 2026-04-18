@@ -1,0 +1,69 @@
+
+
+# 1. 写函数，统计列表里有几个大于 5 的数字
+def confirm_num_than5(lst):
+    count = 0
+    for i in lst:
+        if i > 5 :
+            count += 1
+    return count
+# 2. 写函数，返回列表里所有能被 3 整除的数字组成的新列表
+def confirm_can_devide3(lst):
+    new_lst = []
+    for i in lst:
+        if i %3 == 0:
+            new_lst.append(i)
+    return new_lst
+
+
+# 3. 写函数，把列表里所有小于 10 的数字都加 1 后返回新列表
+def lst_add_1(lst):
+    new_lst = []
+    for i  in lst:
+        if i < 10:
+            new_lst.append(i+1)
+    return new_lst
+
+# 4. 写函数，统计字符串里有几个元音字母
+
+def count_special_letters(s):
+    count = 0
+    for i in s:
+        if i in 'aeiouAEIOU':
+            count += 1
+    return count
+
+# 5. 写函数，找出字符串里所有小写字母，组成一个新字符串返回
+def find_lower_letters(s):
+    new_s = ""
+    for i in s:
+        if i.islower():
+            new_s += i
+    return new_s
+# 6. 写函数，返回列表里所有长度是偶数的字符串组成的新列表
+def find_str_is2(lst):
+    new_lst = []
+    for i in lst:
+        if len(i)%2 == 0 :
+            new_lst.append(i)
+    return new_lst
+# 7. 写函数：先找出列表里的偶数，再把这些偶数乘 2，最后返回新列表
+def find_even_numbers(lst):
+    new_lst= []
+    for i in lst:
+        if i % 2 == 0:
+            new_lst.append(i*2)
+    return new_lst
+
+
+# 8. 写函数：找出字符串里的所有数字字符，如果没有数字就返回空字符串
+def find_numbers(s):
+    new_s = ""
+    for i in s:
+        if i.isdigit():
+            new_s += i
+        else:
+            new_s += ""
+    return new_s
+
+
