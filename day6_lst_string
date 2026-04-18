@@ -1,0 +1,64 @@
+
+
+# 1. 写函数，统计列表里有几个小于 0 的数字
+def count_num_low_than10(lst):
+    count = 0
+    for i in lst:
+        if i < 0:
+            count += 1
+    return count
+# 2. 写函数，返回列表里所有大于等于 10 的数字组成的新列表
+def find_numbers_ge_10(lst):
+    new_lst = []
+    for i in lst:
+        if i >= 10:
+            new_lst.append(i)
+    return new_lst
+
+# 3. 写函数，把字符串里所有小写字母变成大写后返回新字符串
+def capitalize_all_letters(s):
+    new_s = ""
+    for i in s:
+        if i.islower():
+            new_s += i.upper()
+        else:
+            new_s += i
+    return new_s
+def capitalize_all_letters(s):
+    return s.upper()
+# 4. 写函数，找出字符串里所有不是数字的字符，组成一个新字符串返回
+def find_not_number(s):
+    new_s = ""
+    for i in s:
+        if not i.isdigit():
+            new_s += i
+    return new_s
+# 5. 写函数，返回列表里所有长度大于等于 5 的字符串组成的新列表
+def find_strings_len_ge_5(lst):
+    new_lst = []
+    for i in lst:
+        if len(i) >= 5:
+            new_lst.append(i)
+    return new_lst
+# 6. 写函数：先找出列表里的奇数，再把这些奇数加 1，最后返回新列表
+def find_odd_numbers(lst):
+    new_lst = []
+    for i in lst:
+        if i %2 != 0:
+            new_lst.append(i+1)
+    return new_lst
+# 7. 写函数：统计一个列表里有几个字符串是全小写
+def count_lower_str(lst):
+    count = 0
+    for i in lst :
+        if i.islower():
+            count += 1
+    return count
+# 8. 写函数：找出列表里所有回文字符串，并把它们的长度组成一个新列表返回
+
+def find_palindrome_lengths(lst):
+    new_lst = []
+    for i in lst:
+        if i == i[::-1]:
+            new_lst.append(len(i))
+    return new_lst
