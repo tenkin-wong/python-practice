@@ -1,0 +1,67 @@
+
+
+# 1. 写函数，统计列表里有几个偶数大于 10
+def count_even_numbers(lst):
+    count = 0
+    for i in lst:
+        if i % 2 == 0 and i > 10:
+            count += 1
+    return count
+# 2. 写函数，返回字符串里所有不是空格的字符组成的新字符串
+def backwards_un_blank(s):
+    new_s = ""
+    for i in s:
+        if i != " ":
+            new_s += i
+    return new_s
+# 3. 写函数，返回列表里所有首字母是大写的字符串组成的新列表
+def backward_capitalize(lst):
+    new_lst = []
+    for i in lst:
+        if i[0].isupper():
+            new_lst.append(i)
+    return new_lst
+# 4. 写函数，统计字符串里有几个数字字符是偶数
+def count_even_digit_chars(s):
+    count = 0
+    for i in s:
+        if i.isdigit() and int(i) % 2 == 0:
+            count += 1
+    return count
+# 5. 写函数：先找出列表里所有小于 10 的数字，再把它们乘 3，最后返回新列表
+def number_low_than10(lst):
+    new_lst =  []
+    for i in lst:
+        if i < 10 :
+            new_lst.append(i*3)
+    return new_lst
+# 6. 写函数：找出字符串里所有小写字母，并把它们变成大写后组成新字符串返回
+def find_lowercase(s):
+    new_s = ""
+    for i in s:
+        if i.islower():
+            new_s += i.capitalize()
+    return new_s
+# 7. 写函数：统计一个列表里有几个字符串同时满足这两个条件 a长度大于 3  b全部是小写字母
+def count_special_strings(lst):
+    count = 0
+    for i in lst:
+        if len(i) > 3 and i.islower():
+            count += 1
+    return count
+# 8. 写函数：找出列表里所有素数，并返回这些素数的平方组成的新列表
+def is_prime(num):
+    if num < 2:
+        return False
+    for j in range(2, num):
+        if num % j == 0:
+            return False
+    return True
+
+def find_all_prime(lst):
+    new_lst = []
+    for i in lst:
+        if is_prime(i):
+            new_lst.append(i ** 2)
+    return new_lst
+
