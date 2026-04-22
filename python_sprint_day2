@@ -1,0 +1,86 @@
+# 1 写函数，统计一个列表里有多少个大于 10 的偶数
+def count_even_numbers(lst):
+    count = 0
+    for i in lst:
+        if i % 2 == 0 and i > 10 :
+            count += 1
+    return count
+# 2 写函数，返回字符串中大写字母的个数
+def backwards_capitalize_count(s):
+    count = 0
+    for i in s :
+        if i.isupper():
+            count += 1
+    return count
+# 3 写函数，把列表中所有负数找出来，放进新列表返回
+def find_negative(lst):
+    new_lst = []
+    for i in lst:
+        if i < 0 :
+            new_lst.append(i)
+    return new_lst
+# 4 写函数，返回字符串中所有元音字母组成的新字符串
+def backward_letters(s):
+    new_s = ""
+    for i in s:
+        if i in "aeiouAEIOU" :
+            new_s += i
+    return new_s
+# 5写函数，判断一个列表中是否所有元素都大于 0
+
+def all_positive(lst):
+    for i in lst:
+        if i <= 0:
+            return False
+    return True
+# 6 写函数，统计一个字符串中有多少个字符同时满足：
+def count_it(s):
+    count = 0
+    for i in s :
+        if not i.isdigit() and i != " " and i.islower():
+            count += 1
+    return count
+# 7 写函数，把列表中所有奇数平方后放进新列表返回
+def create_new_lst(lst) :
+    new_lst = []
+    for i in lst:
+        if i % 2 != 0 :
+            new_lst.append(i**2)
+    return new_lst
+# 8 写函数，找出字符串中不是字母的字符个数
+def find_not_letters(s):
+    count = 0
+    for i in s :
+        if not i.isalpha():
+            count += 1
+    return count
+# 9 写函数，返回一个列表中最长字符串的长度
+def longest_len(lst):
+    longest = lst[0]
+    for i in lst:
+        if len(i) > len(longest):
+            longest = i
+    return len(longest)
+# 10 写函数，返回字符串中所有不是小写字母的字符组成的新字符串
+def backward_not_lowercase(s):
+    new_s = ""
+    for i in s :
+        if not i.islower():
+            new_s += i
+    return new_s
+# 11写函数，统计列表里有多少个字符串同时满足：
+def count_s3(lst):
+    count = 0
+    for i in lst:
+        if i[0].isalpha() and len(i) > 3 :
+            count += 1
+    return count
+# 12 写函数，把字符串倒序后返回
+def back_s(s):
+    new_s = s[::-1]
+    return new_s
+def reverse_string(s):
+    new_s = ""
+    for i in s:
+        new_s = i + new_s
+    return new_s
